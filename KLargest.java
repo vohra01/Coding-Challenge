@@ -38,4 +38,3 @@ public class KLargest {
         kLargest(arr,k);
     }
 }
-// This code is contributed by Kamal Rawal
