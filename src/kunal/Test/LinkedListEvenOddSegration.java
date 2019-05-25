@@ -1,4 +1,4 @@
-package Test;
+package kunal.Test;
 
 class LinkedListEvenOddSegration {
 	Node head; // head of list
