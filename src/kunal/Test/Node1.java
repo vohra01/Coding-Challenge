@@ -3,19 +3,19 @@ package kunal.Test;
 
 /* A binary tree node has data, pointer to left child 
 and a pointer to right child */
-class Node { 
+class Node1 {
 	char data; 
-	Node left, right; 
+	Node1 left, right;
 
-	Node(char item) 
+	Node1(char item)
 	{ 
 		data = item; 
 		left = right = null; 
 	} 
 }
 
-class BinaryTree { 
-	Node root; 
+class BinaryTree1 {
+	Node1 root;
 	static int preIndex = 0; 
 
 	/* Recursive function to construct binary of size len from 
@@ -23,14 +23,14 @@ class BinaryTree {
 	Initial values of inStrt and inEnd should be 0 and len -1. 
 	The function doesn't do any error checking for cases where 
 	inorder and preorder do not form a tree */
-	Node buildTree(char in[], char pre[], int inStrt, int inEnd) 
+	Node1 buildTree(char in[], char pre[], int inStrt, int inEnd)
 	{ 
 		if (inStrt > inEnd) 
 			return null; 
 
 		/* Pick current node from Preorder traversal using preIndex 
 		and increment preIndex */
-		Node tNode = new Node(pre[preIndex++]); 
+		Node1 tNode = new Node1(pre[preIndex++]);
 
 		/* If this node has no children then return */
 		if (inStrt == inEnd) 
@@ -62,7 +62,7 @@ class BinaryTree {
 	} 
 
 	/* This funtcion is here just to test buildTree() */
-	void printInorder(Node node) 
+	void printInorder(Node1 node)
 	{ 
 		if (node == null) 
 			return; 
@@ -80,11 +80,11 @@ class BinaryTree {
 	// driver program to test above functions 
 	public static void main(String args[]) 
 	{ 
-		BinaryTree tree = new BinaryTree(); 
+		BinaryTree1 tree = new BinaryTree1();
 		char in[] = new char[] { 'D', 'B', 'E', 'A', 'F', 'C' }; 
 		char pre[] = new char[] { 'A', 'B', 'D', 'E', 'C', 'F' }; 
 		int len = in.length; 
-		Node root = tree.buildTree(in, pre, 0, len - 1); 
+		Node1 root = tree.buildTree(in, pre, 0, len - 1);
 
 		// building the tree by printing inorder traversal 
 		System.out.println("Inorder traversal of constructed tree is : "); 

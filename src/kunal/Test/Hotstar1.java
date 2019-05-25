@@ -52,7 +52,7 @@ public class Hotstar1 {
 	    
 	    Set<String> keys = hashtable.keySet();
         for(String key: keys){
-        	Double finalPrice = hashtable.containsKey(key) ? hashtable.get(key) : -1;
+        	Double finalPrice = hashtable.containsKey(key) ? hashtable.get(key) : -1D;
         	finalPrice += hashtable.get(key);
         }
           

@@ -1,24 +1,21 @@
-import java.util.Scanner;
+package kunal.Test;
 
 /**
  * Created by kv58935 on 12/15/2018.
  */
-public class Fibonacci
-{
-    public static void main(String[] args)
-    {
+public class Fibonacci {
+    public static void main(String[] args) {
         int n, a = 0, b = 0, c = 1;
-        //Scanner s = new Scanner(System.in);
+//        Scanner s = new Scanner(System.in);
         System.out.print("Enter value of n:");
         //n = s.nextInt();
-        n=5;
+        n = 5;
         System.out.print("Fibonacci Series:");
-        for(int i = 1; i <= n; i++)
-        {
+        for (int i = 1; i <= n; i++) {
             a = b;
             b = c;
             c = a + b;
-            System.out.print(a+" ");
+            System.out.print(a + " ");
         }
     }
 }

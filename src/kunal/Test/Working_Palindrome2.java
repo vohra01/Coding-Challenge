@@ -10,13 +10,17 @@ class Working_Palindrome2 {
     static boolean canFormPalindrome(String str) {
 
         int[] count = new int[NO_OF_CHARS];
+        return checkForPalindrome(str, count, NO_OF_CHARS);
+    }
+
+    static boolean checkForPalindrome(String str, int[] count, int noOfChars) {
         Arrays.fill(count, 0);
 
         for (int i = 0; i < str.length(); i++)
             count[(int) (str.charAt(i))]++;
 
         int odd = 0;
-        for (int i = 0; i < NO_OF_CHARS; i++) {
+        for (int i = 0; i < noOfChars; i++) {
             if ((count[i] & 1) == 1)
                 odd++;
 
