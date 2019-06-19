@@ -6,13 +6,17 @@ public class WordBreak {
 
     public static void main(String[] args) {
         HashSet<String> hs = new HashSet<String>();
-        hs.add("this");
-        hs.add("is");
-        hs.add("kunal");
-        hs.add("vohra");
-        hs.add("the");
+        hs.add("she");
+        hs.add("supported");
+        hs.add("herself");
+        hs.add("selling");
+        hs.add("fossils");
         hs.add("problem");
-        String inputMessage = "thisiskunalvohra";
+        hs.add("to");
+        hs.add("geologists");
+        hs.add("and");
+        hs.add("tourists");
+        String inputMessage = "shesupportedherselfsellingfossilstogeologistsandtotourists";
 
         WordBreak ws = new WordBreak();
 
@@ -34,13 +38,13 @@ public class WordBreak {
             String word = "";
             while (index < s.length()) {
                 word += s.charAt(index);// add one char at a time
-                // check if word already being solved
+                // check if word already solved
                 if (dict.contains(word)) {
                     if (findUsingDP(s.substring(index + 1), dict, memory,
                             answer + word + " ")) {
                         return true;
                     } else {
-                        System.out.println("backtrack");
+                        System.out.println("backtrack repeated word");
                         index++;
                     }
                 } else {
