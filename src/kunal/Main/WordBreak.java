@@ -38,7 +38,7 @@ public class WordBreak {
 
     static String findQualifiedNumbers(int[] numberArray) {
         List<Integer> ith = new ArrayList();
-        IntStream.of(numberArray).filter(x -> x == 1 && x == 2 && x == 3).map(a-> ith.add(a));
+        //IntStream.of(numberArray).filter(x -> x == 1 && x == 2 && x == 3).map(a-> ith.add(a));
         StringBuffer num = new StringBuffer();
 
 
@@ -49,7 +49,7 @@ public class WordBreak {
 
                 num.append(s[i]);
             if (s[i] == 1) {
-                return true;
+                return "";
             }
 
             }

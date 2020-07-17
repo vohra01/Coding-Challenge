@@ -18,7 +18,7 @@ class LinkedListEvenOddSegration {
 		Node prev = null;
 		Node curr = head;
 
-		/* Get pointer to last Node */
+		/* Get pointer to last Node12 */
 		while (end.next != null)
 			end = end.next;
 
