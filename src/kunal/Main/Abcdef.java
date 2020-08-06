@@ -1,20 +1,21 @@
 package kunal.Main;
 
 class Abcdef extends Base{
+	int a = 222;
 	 
 	 void a() {
-			System.out.println("Default Method in ABCDEF" + super.a);
+			System.out.println("Default Method in ABCDEF " + super.a);
 			super.a();
 		}
 	 
 	 void c() {
-			System.out.println("c Method in ANCDEF");
+			System.out.println("c Method in Abcdef");
 		}
 	 
-	 public static void main(String args[]) {
+	 public static void main(String[] args) {
 		 Base b = new Abcdef();
-//		 Abcdef v = new Base();
-		// Abcdef a = (Abcdef) new Base();
+		 //Abcdef v = new Base();			//Not Possible
+		// Abcdef a = (Abcdef) new Base();	//Not Possible
 		 //a.a();
 		 System.out.println("1");
 		 b.a();
@@ -25,5 +26,14 @@ class Abcdef extends Base{
 		 System.out.println("3");
 		 g.c();
 		 System.out.println("4");
+
+		 Abcdef abcdef = new Abcdef();
+		 System.out.println(abcdef.a);
+		 abcdef.a();
+		 abcdef.c();
+
+		 Base base = new Base();
+		 base.c();
+
 	 }
 }

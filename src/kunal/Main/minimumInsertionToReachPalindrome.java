@@ -5,7 +5,7 @@ import static java.lang.Integer.min;
 // A Naive recursive Java program to find minimum
 // number insertions needed to make a string 
 // palindrome 
-class GFG {
+class minimumInsertionToReachPalindrome {
 
     // Recursive function to find minimum number
     // of insertions

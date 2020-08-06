@@ -65,7 +65,12 @@ class NumberToWord {
 		// long handles upto 9 digit no
 		// change to unsigned long long int to
 		// handle more digit number
-		long n = 438237764;
+		long n = 00100;
+
+		if (n==0){
+			System.out.println("Zero");
+			return;
+		}
 
 		// convert given number in words
 		System.out.printf(convertToWords(n));

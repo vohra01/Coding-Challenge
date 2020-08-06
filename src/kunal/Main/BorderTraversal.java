@@ -15,9 +15,26 @@ class RootNode {
 
 
 class KunalTree {
-    RootNode root;
+    private RootNode root;
 
-    void printLeaves(RootNode node) {
+    // Main From Here
+    public static void main(String args[]) {
+        KunalTree tree = new KunalTree();
+        tree.root = new RootNode(1);
+        tree.root.left = new RootNode(2);
+        tree.root.left.left = new RootNode(3);
+        tree.root.left.right = new RootNode(4);
+        tree.root.left.right.left = new RootNode(5);
+        tree.root.left.right.right = new RootNode(6);
+        tree.root.right = new RootNode(7);
+        tree.root.right.right = new RootNode(8);
+        System.out.print(tree.root.data + " ");
+        tree.printBoundary(tree.root);
+        System.out.println();
+        System.out.println("Tree Height is :: " + tree.height(tree.root));
+    }
+
+    private void printLeaves(RootNode node) {
         if (node != null) {
             //printLeaves(node.right);
             printLeaves(node.right);
@@ -27,7 +44,7 @@ class KunalTree {
         }
     }
 
-    void printBoundaryLeft(RootNode node) {
+    private void printBoundaryLeft(RootNode node) {
         if (node != null) {
             if (node.left != null) {
                 System.out.print(node.data + " ");
@@ -39,7 +56,7 @@ class KunalTree {
         }
     }
 
-    void printBoundaryRight(RootNode node) {
+    private void printBoundaryRight(RootNode node) {
         if (node != null) {
             if (node.right != null) {
                 printBoundaryRight(node.right);
@@ -52,7 +69,7 @@ class KunalTree {
     }
 
     // Print here
-    void printBoundary(RootNode node) {
+    private void printBoundary(RootNode node) {
         if (node != null) {
 
 
@@ -70,19 +87,15 @@ class KunalTree {
         }
     }
 
-    // Main From Here
-    public static void main(String args[]) {
-        KunalTree tree = new KunalTree();
-        tree.root = new RootNode(1);
-        tree.root.left = new RootNode(2);
-        tree.root.left.left = new RootNode(3);
-        tree.root.left.right = new RootNode(4);
-        tree.root.left.right.left = new RootNode(5);
-        tree.root.left.right.right = new RootNode(6);
-        tree.root.right = new RootNode(7);
-        tree.root.right.right = new RootNode(8);
-        System.out.print(tree.root.data + " ");
-        tree.printBoundary(tree.root);
+    private int height(RootNode node) {
+        if (node == null) {
+            return 0;
+        }
+
+        int lHeight = height(node.left);
+        int rHeight = height(node.right);
+
+        return Math.max(lHeight, rHeight) + 1;
     }
 }
 

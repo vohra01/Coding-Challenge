@@ -77,7 +77,7 @@ public class Kelton2 {
 			  break;
 			}
 			int n = list.get(0);
-			//int m = list.get(1);
+			//int treeMap = list.get(1);
 			String  string1 = "";
 			String result = "";
 			for (int j = 0; j < n; j++) {
