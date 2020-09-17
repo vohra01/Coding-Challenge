@@ -35,7 +35,7 @@ class Hotstar3 {
      }
       
      // Calculating the cumulative sum
-     // of the array cnt from the last index.
+     // of the array cnt from the last BinarySearchAlgo.
      for (int i = n-2 ; i >= 0 ; i--)
          cnt[i] += cnt[i + 1];
       

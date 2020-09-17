@@ -64,7 +64,7 @@ public class NumberSystem {
 			array[index] = array[index - 1] + 8;
 			if (array[index] != 341 && !onlyContainsOneTwoAndThree(array[index])) {
 				array[index] = array[index - 1] + 80;
-				// series.add(array[index]);
+				// series.add(array[BinarySearchAlgo]);
 			} else if (array[index] != 3413 && !onlyContainsOneTwoAndThree(array[index])) {
 				array[index] = array[index - 1] + 778;
 			} else if (array[index] != 341111 && !onlyContainsOneTwoAndThree(array[index])) {
@@ -132,25 +132,25 @@ class TestClass {
 		return series;
 	}
 
-	public static List<Integer> printToArrayLimit(int[] array, int index, List<Integer> series) {
-		array[index] = array[index - 1] + 1;
-		if (onlyContainsOneTwoAndThree(array[index])) {
+	public static List<Integer> printToArrayLimit(int[] array, int BinarySearchAlgo, List<Integer> series) {
+		array[BinarySearchAlgo] = array[BinarySearchAlgo - 1] + 1;
+		if (onlyContainsOneTwoAndThree(array[BinarySearchAlgo])) {
 			// Do Nothing
 		} else {
-			array[index] = array[index - 1] + 8;
-			if (array[index] != 341 && !onlyContainsOneTwoAndThree(array[index])) {
-				array[index] = array[index - 1] + 80;
-				// series.add(array[index]);
-			} else if (array[index] != 3413 && !onlyContainsOneTwoAndThree(array[index])) {
-				array[index] = array[index - 1] + 778;
-			} else if (array[index] != 341111 && !onlyContainsOneTwoAndThree(array[index])) {
-				array[index] = array[index - 1] + 7778;
+			array[BinarySearchAlgo] = array[BinarySearchAlgo - 1] + 8;
+			if (array[BinarySearchAlgo] != 341 && !onlyContainsOneTwoAndThree(array[BinarySearchAlgo])) {
+				array[BinarySearchAlgo] = array[BinarySearchAlgo - 1] + 80;
+				// series.add(array[BinarySearchAlgo]);
+			} else if (array[BinarySearchAlgo] != 3413 && !onlyContainsOneTwoAndThree(array[BinarySearchAlgo])) {
+				array[BinarySearchAlgo] = array[BinarySearchAlgo - 1] + 778;
+			} else if (array[BinarySearchAlgo] != 341111 && !onlyContainsOneTwoAndThree(array[BinarySearchAlgo])) {
+				array[BinarySearchAlgo] = array[BinarySearchAlgo - 1] + 7778;
 			}
 		}
 
-		series.add(array[index]);
+		series.add(array[BinarySearchAlgo]);
 
-		printToArrayLimit(array, index + 1, series);
+		printToArrayLimit(array, BinarySearchAlgo + 1, series);
 		return series;
 	}
 

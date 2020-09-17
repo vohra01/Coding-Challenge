@@ -3,10 +3,10 @@ package kunal.Main;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
-public class index {
+public class BinarySearchAlgo {
 
-	// Function to find the index of an element
-	public static int findIndex(int arr[], int t) {
+	// Function to find the BinarySearchAlgo of an element
+	public static int findIndex(int[] arr, int t) {
 		int len = arr.length;
 
 		return IntStream.range(0, len).filter(i -> t == arr[i]).findAny().orElse(-1);
@@ -38,7 +38,7 @@ public class index {
 				"Index position of 7 using Binary Search is: " + binarySearchAlogo(my_array, 0, my_array.length, 7));
 	}
 
-	public static int findIndex1(int arr[], int t) {
+	public static int findIndex1(int[] arr, int t) {
 
 		return Arrays.binarySearch(arr, t);
 	}

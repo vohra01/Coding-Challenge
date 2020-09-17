@@ -101,7 +101,7 @@ class MyStack
 };
 
 // Driver Code
-class Main
+/*class MainJPMC
 {
     public static void main(String[] args)
     {
@@ -116,5 +116,4 @@ class Main
         s.getMin();
         s.pop();
         s.peek();
-    }
-}
+    }*/

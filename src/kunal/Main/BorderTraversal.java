@@ -17,7 +17,7 @@ class RootNode {
 class KunalTree {
     private RootNode root;
 
-    // Main From Here
+    // MainJPMC From Here
     public static void main(String args[]) {
         KunalTree tree = new KunalTree();
         tree.root = new RootNode(1);

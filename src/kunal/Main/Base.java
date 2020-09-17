@@ -1,7 +1,7 @@
 package kunal.Main;
 
 public class Base {
-	int a;
+	public int a;
 
 	public Base() {
 		a = 111;

@@ -36,10 +36,10 @@ class BinaryTree1 {
 		if (inStrt == inEnd) 
 			return tNode; 
 
-		/* Else find the index of this node in Inorder traversal */
+		/* Else find the BinarySearchAlgo of this node in Inorder traversal */
 		int inIndex = search(in, inStrt, inEnd, tNode.data); 
 
-		/* Using index in Inorder traversal, construct left and 
+		/* Using BinarySearchAlgo in Inorder traversal, construct left and
 		right subtress */
 		tNode.left = buildTree(in, pre, inStrt, inIndex - 1); 
 		tNode.right = buildTree(in, pre, inIndex + 1, inEnd); 
@@ -49,7 +49,7 @@ class BinaryTree1 {
 
 	/* UTILITY FUNCTIONS */
 
-	/* Function to find index of value in arr[start...end] 
+	/* Function to find BinarySearchAlgo of value in arr[start...end]
 	The function assumes that value is present in in[] */
 	int search(char arr[], int strt, int end, char value) 
 	{ 

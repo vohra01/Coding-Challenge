@@ -33,8 +33,8 @@ public class TestClass {
 	}
 
 	static int[] solve(int[] arr) {
-		// the value at first index of array to be returned is number of pairs
-		// formed and value at second index is unpaired swords.
+		// the value at first BinarySearchAlgo of array to be returned is number of pairs
+		// formed and value at second BinarySearchAlgo is unpaired swords.
 
 		Arrays.sort(arr);
 		int[] arr1 = new int[2];

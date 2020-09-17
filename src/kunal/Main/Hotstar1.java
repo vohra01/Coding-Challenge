@@ -9,8 +9,8 @@ public class Hotstar1 {
 
 		Hashtable<String, Integer> festCost = new Hashtable<String, Integer>();
 		Scanner in = new Scanner(System.in);
-		int t = in.nextInt(); // Main Cases
-		int n = in.nextInt(); // Main Cases
+		int t = in.nextInt(); // MainJPMC Cases
+		int n = in.nextInt(); // MainJPMC Cases
 		for (int i = 0; i < t; i++) {
 			for (int j = 0; j < n; j++) {
 			//while (in.hasNext()) {
