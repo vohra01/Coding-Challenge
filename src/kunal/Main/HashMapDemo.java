@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 class Movie {
     private String name, actor;
+    private int releaseYr;
 
     @Override
     public boolean equals(Object o) {
@@ -40,8 +41,6 @@ class Movie {
     public void setReleaseYr(int releaseYr) {
         this.releaseYr = releaseYr;
     }
-
-    private int releaseYr;
 }
 
 public class HashMapDemo {
@@ -54,7 +53,7 @@ public class HashMapDemo {
 
         System.out.println(s1.equals(s2));
         System.out.println(s2.equals(s3));
-        System.out.println(s1 == s2);
+        System.out.println(s1.equals(s2));
 
 
         Movie m = new Movie();

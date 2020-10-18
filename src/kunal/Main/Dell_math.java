@@ -57,7 +57,7 @@ import java.util.List;
 import java.util.Scanner;
 // Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
 
-class TestClass {
+class TestClass1 {
 	// Returns minimum number of
 	// jumps to reach arr[h] from arr[l]
 	static int minJumps(int arr[], int l, int h) {

@@ -8,7 +8,7 @@ public class TicTacToe1
     private int[][] board = new int[3][3];
     public boolean isEmpty = false;
       
-    /** Puts an X or O mark at position i,j. */
+    /** Puts an hhhhh or O mark at position i,j. */
     public void putSign(int x, int y)
     {
         if(x<0 || x>2 || y<0 || y>2)
@@ -22,7 +22,7 @@ public class TicTacToe1
             return;
         }
         board[x][y] = player;   // place the mark for the current player
-        player = -player;       // switch players (uses fact that O = - X)
+        player = -player;       // switch players (uses fact that O = - hhhhh)
     }
       
     /** Checks whether the board configuration is a win for the given player. */
@@ -43,7 +43,7 @@ public class TicTacToe1
     {
         if(isWin(X))
         {
-            System.out.println("\n X wins...!!");
+            System.out.println("\n hhhhh wins...!!");
             isEmpty=false;
         }
         else if(isWin(O))
@@ -72,7 +72,7 @@ public class TicTacToe1
                 switch(board[i][j])
                 {
                 case X:
-                    s.append(" X ");
+                    s.append(" hhhhh ");
                     break;
                 case O:
                     s.append(" O ");

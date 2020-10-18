@@ -84,7 +84,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-class TestClass {
+class TestClass1 {
 
 	static int maximum = 0;
 

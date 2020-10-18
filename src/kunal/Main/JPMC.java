@@ -10,31 +10,48 @@ import java.util.List;
 public class JPMC {
 
     public static void main(String[] args) throws IOException {
-        InputStreamReader reader = new InputStreamReader(System.in, StandardCharsets.UTF_8);
-        BufferedReader in = new BufferedReader(reader);
+//        InputStreamReader reader = new InputStreamReader(System.in, StandardCharsets.UTF_8);
+//        BufferedReader in = new BufferedReader(reader);
+//
+//        List<Integer> inputs = new ArrayList<>();
+//        String line = in.readLine(); // to read multiple integers line
+//        String[] strs = line.trim().split("\\s+");
+//        for (int i = 0; i < 2; i++) {
+//            inputs.add(Integer.parseInt(strs[i]));
+//        }
+//
+//        int fileSize = inputs.get(0);
+//        int transferTime = inputs.get(1);
+//
+//
+//        Double speed = (fileSize * 1000) / (transferTime * 1.04858);
+//        System.out.println(speed);
+//
+//        float bytesPerSec = fileSize / transferTime;
+//        System.out.println(bytesPerSec + " Bps");
+//        float kbPerSec = bytesPerSec / (1024);
+//        System.out.println(kbPerSec + " KBps ");
+//        float mbPerSec = kbPerSec / (1024);
+//        System.out.println(mbPerSec + " MBps ");
+//        System.out.println((int) (mbPerSec) + "Bla Bla");
 
-        List<Integer> inputs = new ArrayList<>();
-        String line = in.readLine(); // to read multiple integers line
-        String[] strs = line.trim().split("\\s+");
-        for (int i = 0; i < 2; i++) {
-            inputs.add(Integer.parseInt(strs[i]));
+        System.out.println(divide(4,0));
+    }
+
+
+    public static int divide(int a, int b) {
+        int c = -1;
+
+        try {
+            c = a / b;
+        }
+        catch (Exception e) {
+            System.err.print("Exception ");
+        }
+        finally {
+            System.err.println("Finally ");
         }
 
-        int fileSize = inputs.get(0);
-        int transferTime = inputs.get(1);
-
-
-        Double speed = (fileSize * 1000) / (transferTime * 1.04858);
-        System.out.println(speed);
-
-        float bytesPerSec = fileSize / transferTime;
-        System.out.println(bytesPerSec + " Bps");
-        float kbPerSec = bytesPerSec / (1024);
-        System.out.println(kbPerSec + " KBps ");
-        float mbPerSec = kbPerSec / (1024);
-        System.out.println(mbPerSec + " MBps ");
-        System.out.println((int) (mbPerSec) + "Bla Bla");
-
-
+        return c;
     }
 }

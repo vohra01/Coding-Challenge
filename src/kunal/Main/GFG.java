@@ -1,72 +1,51 @@
 package kunal.Main;
 
-// Java program to implement division
-// with large number 
-class GFG { 
-	public static String longDivision( 
-		String number, 
-		int divisor) 
-	{
+import java.util.Arrays;
 
-long abc = Long.parseLong(number);
-        abc = (long) (abc* 1000 * 1.048576);
+class GFG {
 
-		StringBuilder result
-			= new StringBuilder(); 
+    static void SieveOfEratosthenes(boolean prime[],
+                                    int p_size) {
+        prime[0] = false;
+        prime[1] = false;
 
-		char[] dividend
-			= number.toCharArray(); 
+        for (int p = 2; p * p <= p_size; p++) {
 
-		// Initially the carry 
-		// would be zero 
-		int carry = 0; 
+            if (prime[p]) {
 
-		// Iterate the dividend 
-		for ( 
-			int i = 0; 
-			i < dividend.length; i++) { 
-			// Prepare the number to 
-			// be divided 
-			int x 
-				= carry * 10
-				+ Character.getNumericValue( 
-						dividend[i]); 
+                for (int i = p * p; i <= p_size; i += p)
+                    prime[i] = false;
+            }
+        }
+    }
 
-			// Append the result with 
-			// partial quotient 
-			result.append(x / divisor); 
+    // Function that finds
+// maximum contiguous subarray of prime numbers
+    static int maxPrimeSubarray(int arr[], int n) {
+        int max_ele = Arrays.stream(arr).max().getAsInt();
+        boolean prime[] = new boolean[max_ele + 1];
+        Arrays.fill(prime, true);
 
-			// Prepare the carry for 
-			// the next Iteration 
-			carry = x % divisor; 
-		} 
+        SieveOfEratosthenes(prime, max_ele);
 
-		// Remove any leading zeros 
-		for ( 
-			int i = 0; 
-			i < result.length(); i++) { 
-			if ( 
-				result.charAt(i) != '0') { 
-				// Return the result 
-				return result.substring(i); 
-			} 
-		} 
-		// Return empty string 
-		// if number is empty 
-		return ""; 
-	} 
+        int current_max = 0, max_so_far = 0;
 
-	// Driver code 
-	public static void main( 
-		String[] args) 
-	{ 
-		String number 
-			= "16738461734167846";
-		int divisor = 13*60;
-		System.out.println( 
-			longDivision(
-                    number, divisor));
-	} 
-} 
+        for (int i = 0; i < n; i++) {
+            if (prime[arr[i]] == false)
+                current_max = 0;
+            else {
+                current_max++;
+                max_so_far = Math.max(current_max, max_so_far);
+            }
+        }
+        return max_so_far;
+    }
 
-// This code is contributed by Saurabh321Gupta. 
+    // Driver code
+    public static void main(String[] args) {
+        int arr[] = {1, 0, 2, 4, 3, 29, 11, 7, 8, 9};
+        int n = arr.length;
+        System.out.print(maxPrimeSubarray(arr, n));
+    }
+}
+

@@ -32,7 +32,7 @@ class Palindrome {
  * 
   import java.util.Scanner;
 
-class TestClass {
+class TestClass1 {
 
 	static boolean checkPalindrome(String str) {
 		int n = str.length();

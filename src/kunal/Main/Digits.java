@@ -67,7 +67,7 @@ public class Digits {
 
 /*
 import java.util.Scanner;
-class TestClass {
+class TestClass1 {
     public static void main(String args[] ) throws Exception {
 		Scanner sc = new Scanner(System.in);
 

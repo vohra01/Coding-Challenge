@@ -12,7 +12,7 @@ public class CoinFlip {
      * If n = len(coins):
      *      Time Complexity: O(n)
      *      Space Complexity: O(n)
-     * 
+     *
      * @param coins The coin array
      * @return The maximum adjacency achievable for the array resulting from the required flip
      */
